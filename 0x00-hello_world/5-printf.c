@@ -1,7 +1,6 @@
 #include<stdio.h>
 /**
 * main - a program that prints using printf
-
 * Function
 * Return: 0 (succ) 
 **/
