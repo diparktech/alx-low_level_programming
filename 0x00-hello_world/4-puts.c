@@ -1,10 +1,10 @@
 #include<stdio.h>
 /**
- * mainWrite a C program that prints exactly Programming is like building a multilingual puzzle, followed by a new line.
- * return 0 : (successful execution)
+ * mainWrite a C program that prints ex
+ * Return 0 : (success)
  */
 int main (void)
 {
-	puts ("\"Programming is like building a multilingual puzzle");
-return (0);
+ puts("\"Programming is like building a multilingual puzzle");
+return(0);
 }
