@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+int _putchar(char c); // Declaration of _putchar function
+
 /**
- * main - fibonacci <3
+ * main - Fibonacci <3
  *
- * Purpose - no hardcode
+ * Purpose - generate Fibonacci sequence up to a certain limit
  *
- * Return:  (Success)
+ * Return: (Success)
  */
 
 int main(void)
@@ -19,11 +21,15 @@ int main(void)
 	unsigned long int aft1;
 	unsigned long int aft2;
 
-	printf("%lu", bef);
+	_putchar('0' + bef % 10); // Print the first Fibonacci number
 
 	for (i = 1; i < 91; i++)
 	{
-		printf(", %lu", aft);
+		_putchar(',');
+		_putchar(' ');
+		_putchar('0' + aft / 10 % 10); // Print the tens digit
+		_putchar('0' + aft % 10); // Print the ones digit
+
 		aft += bef;
 		bef = aft - bef;
 	}
@@ -35,53 +41,21 @@ int main(void)
 
 	for (i = 92; i < 99; ++i)
 	{
-		printf(", %lu", aft1 + (aft2 / l));
-		printf("%lu", aft2 % l);
+		_putchar(',');
+		_putchar(' ');
+		_putchar('0' + aft1 / 10 % 10); // Print the tens digit of the first part
+		_putchar('0' + aft1 % 10); // Print the ones digit of the first part
+
+		printf("%lu", aft2);
+
 		aft1 = aft1 + bef1;
 		bef1 = aft1 - bef1;
 		aft2 = aft2 + bef2;
 		bef2 = aft2 - bef2;
 	}
-	printf("\n");
+
+	_putchar('\n');
 	return (0);
 }
 
-
-_putchar.c
-
-#include "main.h"
-#include <unistd.h>
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-
-main.h
-
-#ifndef main_h
-#define main_h
-
-int _putchar(char);
-void print_alphabet(void);
-void print_alphabet_x10(void);
-int _islower(int c);
-int _isalpha(int c);
-int print_sign(int n);
-int _abs(int);
-int print_last_digit(int);
-void jack_bauer(void);
-void times_table(void);
-int add(int, int);
-void print_to_98(int n);
-void print_times_table(int n);
-
-#endif
 
