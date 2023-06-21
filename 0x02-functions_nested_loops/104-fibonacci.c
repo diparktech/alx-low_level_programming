@@ -21,14 +21,14 @@ int main(void)
 	unsigned long int aft1;
 	unsigned long int aft2;
 
-	_putchar('0' + bef % 10); // Print the first Fibonacci number
+	_putchar('0' + bef % 10); 
 
 	for (i = 1; i < 91; i++)
 	{
 		_putchar(',');
 		_putchar(' ');
-		_putchar('0' + aft / 10 % 10); // Print the tens digit
-		_putchar('0' + aft % 10); // Print the ones digit
+		_putchar('0' + aft / 10 % 10); 
+		_putchar('0' + aft % 10); 
 
 		aft += bef;
 		bef = aft - bef;
@@ -43,8 +43,8 @@ int main(void)
 	{
 		_putchar(',');
 		_putchar(' ');
-		_putchar('0' + aft1 / 10 % 10); // Print the tens digit of the first part
-		_putchar('0' + aft1 % 10); // Print the ones digit of the first part
+		_putchar('0' + aft1 / 10 % 10); 
+		_putchar('0' + aft1 % 10); 
 
 		printf("%lu", aft2);
 
