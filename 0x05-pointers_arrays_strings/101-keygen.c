@@ -4,7 +4,7 @@
 
 /**
  * main - program that generates random valid
- * passwords for the program 
+ * passwords for the program
  *
  * Return: Always 0 (Success)
  */
