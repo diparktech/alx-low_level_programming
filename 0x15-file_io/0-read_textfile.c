@@ -3,9 +3,9 @@
 /**
  * read_textfile- print text file  to STDOUT.
  * @filename: file being read
- * @letters: n0. of letters 
+ * @letters: n0. of letters
  * Return: w- actual number of bytes 
- *        0 failed function or name is NULL.
+ * 0 failed function.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -13,7 +13,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t fd;
 	ssize_t w;
 	ssize_t t;
-
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
